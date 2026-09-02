@@ -28,7 +28,7 @@ function App() {
       {/* HEADER */}
       <div className='flex flex-col gap-y-4 bg-white py-5 xl:px-50 lg:px-40 md:px-30 sm:px-20 px-10'>
         {/* slogan */}
-        <p className='text-left font-stretch-110% font-bold tracking-[4px] text-xl text-roses-green'>
+        <p className='text-left font-stretch-110% font-bold tracking-[4px] text-roses-green xl:text-xl lg:text-xl md:text-xl text-md'>
           TASTES LIKE MA MADE IT
         </p>
         {/* logo */}
@@ -45,24 +45,12 @@ function App() {
           <div className='flex flex-1 bg-gray-400 h-px'/>
         </div>
 
-        {/* download */}
-        <a 
-          href={Menu} 
-          download="Menu_07-26.pdf" 
-          className='flex flex-row gap-x-1 justify-center items-center'
-        >
-          <p className='text-sm text-roses-red'>Download PDF</p>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill={colors.rosesRed} className="size-3">
-            <path d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z" />
-          </svg>
-        </a>
-
         {/* view */}
-        <div className='w-full h-200 border border-gray-200 rounded-lg overflow-hidden'>
+        <div className="w-full h-[65vh] sm:h-[85vh] min-h-100">
           <iframe
-            src={Menu}
+            src={`${Menu}#toolbar=1&navpanes=1&view=FitH`}
             title="Menu PDF"
-            className='w-full h-full'
+            className="w-full h-full border-0"
           />
         </div>
       </div>
